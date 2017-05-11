@@ -27,26 +27,14 @@ const Subjects = {
   Components: 'Components',
   PropsVsState: 'Props vs. State',
   ImperativeToDeclarative: 'Imperative to Declarative',
-  Forms: 'Forms',
-  Testing: 'Testing',
-  CompoundComponents: 'Compound Components',
-  Context: 'Context',
-  HigherOrderComponents: 'Higher Order Components',
-  RenderProps: 'Render Props',
-  RenderOptimizations: 'Performance and Render Optimizations',
-  TweenState: 'TweenState',
-  Animation: 'Animation',
+  // Forms: 'Forms',
+  // CompoundComponents: 'Compound Components',
+  // HigherOrderComponents: 'Higher Order Components',
   Routing: 'Routing',
-  ServerRendering: 'Server Rendering',
-  JSONTable: 'JSON Table',
-  Select: 'Select',
-  Slider: 'Slider',
-  Calculator: 'Calculator',
+  // ServerRendering: 'Server Rendering',
   ChatApp: 'Chat App',
-  Cursors: 'Cursors',
-  MigratingToReact: 'Migrating to React',
-  Redux: 'Redux',
-  MiniRedux: 'Mini Redux'
+  Flux: 'Flux',
+  Redux: 'Redux'
 }
 
 const SubjectDirNames = Object.keys(Subjects)

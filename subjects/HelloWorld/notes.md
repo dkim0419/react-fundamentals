@@ -346,5 +346,3 @@ to be able to decide precisely when to update the UI. React doesn't
 rerender until you tell it you're ready.
 
 Let's dig in.
-
-

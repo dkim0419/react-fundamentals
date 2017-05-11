@@ -24,6 +24,9 @@ module.exports = {
     if (fs.existsSync(path.join(SubjectsDir, dir, 'lecture.js')))
       entries[dir + '-lecture'] = path.join(SubjectsDir, dir, 'lecture.js')
 
+    if (fs.existsSync(path.join(SubjectsDir, dir, 'notes.js')))
+      entries[dir + '-notes'] = path.join(SubjectsDir, dir, 'notes.js')
+
     return entries
   }, {
     shared: [ 'react', 'react-dom' ]
