@@ -2,13 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 ////////////////////////////////////////////////////////////////////////////////
+// Vanilla Javascript – how would you render a text input
+// var element = document.createElement('input');
+// element.placeholder = 'Hello, hackers.'
+// document.body.insertBefore(element, document.getElementById('app'));
+
+////////////////////////////////////////////////////////////////////////////////
 // React components are really just functions that take attributes
-//const element = React.DOM.input({type: 'text'})
-//ReactDOM.render(element, document.getElementById('app'))
+// const element = React.DOM.input({ type: 'text', placeholder: 'Hello hackers' })
+// ReactDOM.render(element, document.getElementById('app'))
 
 ////////////////////////////////////////////////////////////////////////////////
 // You can also pass in children as extra arguments
-//const element = React.DOM.select({value: '2'},
+//const element = React.DOM.select({},
                                 //React.DOM.option({value: '1'}, 'one'),
                                 //React.DOM.option({value: '2'}, 'two'),
                                 //React.DOM.option({value: '3'}, 'three')
@@ -64,28 +70,29 @@ import ReactDOM from 'react-dom'
 // JSX is simply different syntax for calling functions
 //const element = <div className="App">
                 //<h1 className="Title">Hello!</h1>
-                //<p>Pork Carnitas street tacos are the best</p>
+                //<p>Fried Nemo baos are the best</p>
               //</div>
 
 //const { div, h1, p } = React.DOM
 //const element = div({ className: "App" },
                 //h1({ className: "Title" }, 'Hello!'),
-                //p({}, 'Pork Carnitas street tacos are the best')
+                //p({}, 'Fried Nemo baos are the best')
               //)
 
 //ReactDOM.render(element, document.getElementById('app'))
 
 ////////////////////////////////////////////////////////////////////////////////
 // no special template syntax/helpers, just use Array methods on lists
-//const tacos = [
-  //{ name: 'Carnitas' },
-  //{ name: 'Pollo' },
-  //{ name: 'Asada' }
-//]
-//const items = tacos.map(function(taco) {
-  //return <li>{taco.name}</li>
-//})
-//ReactDOM.render(<ul>{items}</ul>), document.getElementById('app'))
+// const { li, ul } = React.DOM
+// const baos = [
+//   { name: 'Chicken Katso' },
+//   { name: 'Fried Nemo' },
+//   { name: 'Avocado Banger' }
+// ]
+// const items = baos.map(function(bao) {
+//   return <li>{bao.name}</li>
+// })
+// ReactDOM.render(<ul>{items}</ul>, document.getElementById('app'))
 
 
 ////////////////////////////////////////////////////////////////////////////////

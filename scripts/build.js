@@ -22,19 +22,19 @@ const RootDir = path.resolve(__dirname, '..')
 const SubjectsDir = path.join(RootDir, 'subjects')
 
 const Subjects = {
-  HelloWorld: 'Hello World',
-  Rendering: 'Rendering',
-  Components: 'Components',
-  PropsVsState: 'Props vs. State',
-  ImperativeToDeclarative: 'Imperative to Declarative',
+  '01-HelloWorld': 'Hello World',
+  '02-Rendering': 'Rendering',
+  '03-Components': 'Components',
+  '04-PropsVsState': 'Props vs. State',
   // Forms: 'Forms',
   // CompoundComponents: 'Compound Components',
   // HigherOrderComponents: 'Higher Order Components',
-  Routing: 'Routing',
+  '05-ImperativeToDeclarative': 'Imperative to Declarative',
+  '06-Flux': 'Flux',
+  '07-Redux': 'Redux',
+  '08-Routing': 'Routing',
+  '09-ChatApp': 'Chat App',
   // ServerRendering: 'Server Rendering',
-  ChatApp: 'Chat App',
-  Flux: 'Flux',
-  Redux: 'Redux'
 }
 
 const SubjectDirNames = Object.keys(Subjects)
@@ -58,6 +58,9 @@ const markup = ReactDOMServer.renderToStaticMarkup(
               React.DOM.td({ className: 'solution-link' },
                 React.DOM.a({ href: '/' + dir + '/solution.html' }, 'solution')
               )
+              // React.DOM.td({ className: 'notes-link' },
+              //   React.DOM.a({ href: '/' + dir + '/notes.html' }, 'notes')
+              // )
             )
           })
         )

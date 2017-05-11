@@ -34,6 +34,9 @@ a:link:hover {
 #index table td.exercise-link {
   padding-left: 24px;
 }
+#index table td.notes-link {
+  padding-left: 24px;
+}
 
 .ContentToggle {
   border: 1px solid #ccc;
