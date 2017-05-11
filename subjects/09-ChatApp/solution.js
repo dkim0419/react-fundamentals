@@ -21,14 +21,14 @@ import './styles'
 /*
 Here's how to use the ChatUtils:
 
-login((error, auth) => {
-  // hopefully the error is `null` and you have a auth.github object
+login((error, user) => {
+  // hopefully the error is `null` and you have a user object
 })
 
 sendMessage(
-  auth.uid,                       // the auth.uid string
-  auth.github.username,           // the username
-  auth.github.profileImageURL,    // the user's profile image
+  user.uid,                       // the user.uid string
+  user.displayName,           // the user displayName
+  user.photoURL,    // the user's profile image
   'hello, this is a message'      // the text of the message
 )
 
@@ -76,13 +76,13 @@ class SmartScroller extends React.Component {
 
 class Chat extends React.Component {
   state = {
-    auth: null,
+    user: null,
     messages: []
   }
 
   componentDidMount() {
-    login((error, auth) => {
-      this.setState({ auth })
+    login((error, user) => {
+      this.setState({ user })
 
       subscribeToMessages(messages => {
         this.setState({ messages })
@@ -93,14 +93,14 @@ class Chat extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    const { auth } = this.state
+    const { user } = this.state
     const messageText = this.messageInput.value
 
     if ((/\S/).test(messageText)) {
       sendMessage(
-        auth.uid,                       // the auth.uid string
-        auth.github.username,           // the username
-        auth.github.profileImageURL,    // the user's profile image
+        user.uid,                       // the user.uid string
+        user.displayName,           // the user displayName
+        user.photoURL,    // the user's profile image
         messageText                     // the text of the message
       )
 
@@ -110,9 +110,9 @@ class Chat extends React.Component {
   }
 
   render() {
-    const { auth, messages } = this.state
+    const { user, messages } = this.state
 
-    if (auth == null)
+    if (user === null)
       return <p>Loading...</p>
 
     // Array of arrays of messages grouped by user.
@@ -131,7 +131,7 @@ class Chat extends React.Component {
     return (
       <div className="chat">
         <header className="chat-header">
-          <h1 className="chat-title">HipReact</h1>
+          <h1 className="chat-title">Slacker</h1>
           <p className="chat-message-count"># messages: {messages.length}</p>
         </header>
         <SmartScroller className="messages">

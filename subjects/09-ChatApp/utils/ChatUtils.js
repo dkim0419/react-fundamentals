@@ -1,4 +1,15 @@
-import Firebase from 'firebase/lib/firebase-web'
+import * as firebase from 'firebase'
+
+var config = {
+    apiKey: "AIzaSyBWabCfHAeE2Oed6dTjjWwRVe4TC18m_aU",
+    authDomain: "slacker-1b8c9.firebaseapp.com",
+    databaseURL: "https://slacker-1b8c9.firebaseio.com",
+    projectId: "slacker-1b8c9",
+    storageBucket: "slacker-1b8c9.appspot.com",
+    messagingSenderId: "560142945744"
+  };
+firebase.initializeApp(config);
+var database = firebase.database();
 
 const ReservedRefNameChars = /[\.#\$\[\]]/g
 
@@ -26,31 +37,41 @@ const escapeValue = (rawValue) => {
   return value
 }
 
-const BaseRef = new Firebase('https://hip-react.firebaseio.com')
-const MessagesRef = BaseRef.child('messages')
+// const BaseRef = new Firebase('https://slacker-1b8c9.firebaseio.com')
+const MessagesRef = database.ref('messages')
 
 let serverTimeOffset = 0
-BaseRef.child('.info/serverTimeOffset').on('value', function (snapshot) {
+database.ref('.info/serverTimeOffset').on('value', function (snapshot) {
   serverTimeOffset = snapshot.val()
 })
 
 const saveAuth = (auth) =>
-  BaseRef.child('users/' + auth.uid).set(escapeValue(auth))
+  database.ref('users/' + auth.uid).set(escapeValue(auth))
+
+var provider = new firebase.auth.GithubAuthProvider();
+
 
 export const login = (callback) => {
-  const auth = BaseRef.getAuth()
 
-  if (auth) {
-    saveAuth(auth)
-    callback(null, auth)
-  } else {
-    BaseRef.authWithOAuthPopup('github', function (error, auth) {
-      if (auth)
-        saveAuth(auth)
-
-      callback(error, auth)
-    })
-  }
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      saveAuth(user);
+      callback(null, user);
+      // ...
+    } else {
+      firebase.auth().signInWithPopup(provider)
+        .then(function(auth) {
+          console.log(auth);
+          if (auth)
+            saveAuth(auth.user)
+            callback(null, auth.user)
+        }).catch(function(error) {
+          console.log(error);
+          callback(error, null)
+        });
+    }
+  });
 }
 
 export const sendMessage = (uid, username, avatarURL, text) => {
@@ -69,7 +90,7 @@ export const subscribeToMessages = (callback) => {
 
     snapshot.forEach(function (s) {
       const message = s.val()
-      message._key = s.key()
+      message._key = s.key
       messages.push(message)
     })
 
