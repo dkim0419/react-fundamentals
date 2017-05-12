@@ -1,17 +1,24 @@
-## Welcome to React Training!
+## React Fundamentals
 
-This repo contains the course material for [React Training](https://reacttraining.com/). Before attending the training, please make sure you can run this repository.
+This repo contains the material for a React Fundamentals workshop. The material is based on [React Training's](https://reacttraining.com/) [react-subjects](https://github.com/reacttraining/react-subjects).
 
-First, install [git](http://git-scm.com/downloads) and the latest stable version of [node](https://nodejs.org/). Then:
+Before attending the workshop, please make sure you can run this repo.
+
+## Getting started
+
+Make sure you have installed [git](http://git-scm.com/downloads) and the latest stable version of [node](https://nodejs.org/).
+
+Then:
 
 ```sh
 $ git clone https://github.com/ReactTraining/react-subjects.git
-$ cd react-subjects
+$ cd react-fundamentals
 $ npm install
 $ npm start
 ```
+_Note: you may use [yarn](https://yarnpkg.com/en/) instead of npm_
 
-Then open your browser to [http://localhost:8080](http://localhost:8080). You should see a list of subjects.
+Then open your browser to [http://localhost:8080](http://localhost:8080). You should see a list of tops.
 
 **IMPORTANT:** Please read the [JavaScript Primer](https://github.com/ReactTraining/react-subjects/blob/master/JavaScriptPrimer.md) before attending the workshop. It's a refresher on some of the newer bits of JavaScript you'll want to be familiar with in order to get the most out of the experience.
 
@@ -41,7 +48,7 @@ $ nvm use default stable
 $ sudo rm -rf node_modules
 
 # If you installed node with nvm (suggested):
-$ sudo rm -rf ~/.npm 
+$ sudo rm -rf ~/.npm
 
 # If you installed node with Homebrew:
 $ sudo rm -rf /usr/local/lib/node_modules
