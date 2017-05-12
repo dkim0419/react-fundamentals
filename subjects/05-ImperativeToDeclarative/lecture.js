@@ -1,3 +1,13 @@
+//////////////////////////////////////////////////////////////
+// Imperative: how you do something
+// Declarative: what to do
+//
+// Analogy from real life: I'm in Downtown Kitchener, how do I get to Velocity Start
+// Imperative (How): Head northwest on King St W toward Francis St N,
+//                  then turn right on Victoria St, then left on Weber St,
+//                  then left at University Ave, and then right on Seagram Dr.
+// Declarative (What): The address for Velocity Start is South Campus Hall, 200 University Ave
+
 import React, { PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import createOscillator from './utils/createOscillator'

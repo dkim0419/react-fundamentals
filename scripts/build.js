@@ -22,7 +22,7 @@ const RootDir = path.resolve(__dirname, '..')
 const SubjectsDir = path.join(RootDir, 'subjects')
 
 const Subjects = {
-  '01-HelloWorld': 'Hello World',
+  '01-WhyReact': 'Why React?',
   '02-Rendering': 'Rendering',
   '03-Components': 'Components',
   '04-PropsVsState': 'Props vs. State',
@@ -36,6 +36,12 @@ const Subjects = {
   '09-ChatApp': 'Chat App',
   // ServerRendering: 'Server Rendering',
 }
+
+const excludeExcercises = [
+  '01-WhyReact',
+  '05-ImperativeToDeclarative',
+  '06-Flux',
+]
 
 const SubjectDirNames = Object.keys(Subjects)
 
@@ -53,10 +59,14 @@ const markup = ReactDOMServer.renderToStaticMarkup(
                 React.DOM.a({ href: '/' + dir + '/lecture.html' }, Subjects[dir])
               ),
               React.DOM.td({ className: 'exercise-link' },
-                React.DOM.a({ href: '/' + dir + '/exercise.html' }, 'exercise')
+                !excludeExcercises.includes(dir)
+                  ? React.DOM.a({ href: '/' + dir + '/exercise.html' }, 'exercise')
+                  : null
               ),
               React.DOM.td({ className: 'solution-link' },
-                React.DOM.a({ href: '/' + dir + '/solution.html' }, 'solution')
+              !excludeExcercises.includes(dir)
+                ? React.DOM.a({ href: '/' + dir + '/solution.html' }, 'solution')
+                : null
               )
               // React.DOM.td({ className: 'notes-link' },
               //   React.DOM.a({ href: '/' + dir + '/notes.html' }, 'notes')
