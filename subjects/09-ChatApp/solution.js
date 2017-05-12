@@ -131,15 +131,17 @@ class Chat extends React.Component {
     return (
       <div className="chat">
         <header className="chat-header">
-          <h1 className="chat-title">Slacker</h1>
+          <h1 className="chat-title">reslack</h1>
           <p className="chat-message-count"># messages: {messages.length}</p>
         </header>
         <SmartScroller className="messages">
           <ol className="message-groups">
           {messageGroups.map(messages => (
             <li className="message-group">
-              <div className="message-group-avatar">
-                <img src={messages[0].avatarURL}/>
+              <div
+                className="message-group-avatar"
+                style={{backgroundImage: `url(${messages[0].avatarURL})`}}
+              >
               </div>
               <ol className="messages">
               {messages.map(message => (

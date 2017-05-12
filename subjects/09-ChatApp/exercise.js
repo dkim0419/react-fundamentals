@@ -47,41 +47,20 @@ class Chat extends React.Component {
     return (
       <div className="chat">
         <header className="chat-header">
-          <h1 className="chat-title">HipReact</h1>
+          <h1 className="chat-title">reslack</h1>
           <p className="chat-message-count"># messages: 3</p>
         </header>
         <div className="messages">
           <ol className="message-groups">
             <li className="message-group">
-              <div className="message-group-avatar">
-                <img src="https://avatars1.githubusercontent.com/u/92839"/>
+              <div
+                className="message-group-avatar"
+                style={{backgroundImage: 'url("https://avatars0.githubusercontent.com/u/5963656?v=3")'}}
+              >
               </div>
               <ol className="messages">
-                <li className="message">So, check it out:</li>
-                <li className="message">QA Engineer walks into a bar.</li>
-                <li className="message">Orders a beer.</li>
-                <li className="message">Orders 0 beers.</li>
-                <li className="message">Orders 999999999 beers.</li>
-                <li className="message">Orders a lizard.</li>
-                <li className="message">Orders -1 beers.</li>
-                <li className="message">Orders a sfdeljknesv.</li>
-              </ol>
-            </li>
-            <li className="message-group">
-              <div className="message-group-avatar">
-                <img src="https://avatars2.githubusercontent.com/u/100200"/>
-              </div>
-              <ol className="messages">
-                <li className="message">Haha</li>
-                <li className="message">Stop stealing other people's jokes :P</li>
-              </ol>
-            </li>
-            <li className="message-group">
-              <div className="message-group-avatar">
-                <img src="https://avatars1.githubusercontent.com/u/92839"/>
-              </div>
-              <ol className="messages">
-                <li className="message">:'(</li>
+                <li className="message">Welcome to the React Fundamentals workshop!</li>
+                <li className="message">Hello, world</li>
               </ol>
             </li>
           </ol>
