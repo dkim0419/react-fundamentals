@@ -27,8 +27,8 @@ login((error, user) => {
 
 sendMessage(
   user.uid,                       // the user.uid string
-  user.displayName,           // the user displayName
-  user.photoURL,    // the user's profile image
+  user.displayName,               // the user displayName
+  user.photoURL,                  // the user's profile image
   'hello, this is a message'      // the text of the message
 )
 
@@ -77,7 +77,8 @@ class SmartScroller extends React.Component {
 class Chat extends React.Component {
   state = {
     user: null,
-    messages: []
+    messages: [],
+    messageText: '',
   }
 
   componentDidMount() {
@@ -93,8 +94,7 @@ class Chat extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    const { user } = this.state
-    const messageText = this.messageInput.value
+    const { user, messageText } = this.state
 
     if ((/\S/).test(messageText)) {
       sendMessage(
@@ -105,8 +105,15 @@ class Chat extends React.Component {
       )
 
       // Clear the form.
-      event.target.reset()
+      this.setState({ messageText: '' })
     }
+  }
+
+  handleInputChange = (event) => {
+    event.preventDefault()
+    const messageText = event.target.value
+
+    this.setState({ messageText })
   }
 
   render() {
@@ -154,7 +161,12 @@ class Chat extends React.Component {
         </SmartScroller>
         <form className="new-message-form" onSubmit={this.handleSubmit}>
           <div className="new-message">
-            <input ref={node => this.messageInput = node} type="text" placeholder="say something..."/>
+            <input
+              type="text"
+              placeholder="say something..."
+              value={this.state.messageText}
+              onChange={this.handleInputChange}
+            />
           </div>
         </form>
       </div>

@@ -21,14 +21,14 @@ import './styles'
 /*
 Here's how to use the ChatUtils:
 
-login((error, auth) => {
-  // hopefully the error is `null` and you have a auth.github object
+login((error, user) => {
+  // hopefully the error is `null` and you have a user object
 })
 
 sendMessage(
-  auth.uid,                       // the auth.uid string
-  auth.github.username,           // the username
-  auth.github.profileImageURL,    // the user's profile image
+  user.uid,                       // the user.uid string
+  user.displayName,               // the user displayName
+  user.photoURL,                  // the user's profile image
   'hello, this is a message'      // the text of the message
 )
 
@@ -60,14 +60,15 @@ class Chat extends React.Component {
               </div>
               <ol className="messages">
                 <li className="message">Welcome to the React Fundamentals workshop!</li>
-                <li className="message">Hello, world</li>
+                <li className="message">Hello</li>
+                <li className="message">It's me.</li>
               </ol>
             </li>
           </ol>
         </div>
         <form className="new-message-form">
           <div className="new-message">
-            <input ref="message" type="text" placeholder="say something..."/>
+            <input type="text" placeholder="say something..."/>
           </div>
         </form>
       </div>
