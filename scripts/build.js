@@ -29,18 +29,18 @@ const Subjects = {
   // Forms: 'Forms',
   // CompoundComponents: 'Compound Components',
   // HigherOrderComponents: 'Higher Order Components',
-  '05-ImperativeToDeclarative': 'Imperative to Declarative',
-  '06-Flux': 'Flux',
-  '07-Redux': 'Redux',
-  '08-Routing': 'Routing',
-  '09-ChatApp': 'Chat App',
+  // 'ImperativeToDeclarative': 'Imperative to Declarative',
+  '05-Flux': 'Flux',
+  // 'Redux': 'Redux',
+  // 'Routing': 'Routing',
+  '06-ChatApp': 'Chat App',
   // ServerRendering: 'Server Rendering',
 }
 
 const excludeExcercises = [
   '01-WhyReact',
-  '05-ImperativeToDeclarative',
-  '06-Flux',
+  'ImperativeToDeclarative',
+  '05-Flux',
 ]
 
 const SubjectDirNames = Object.keys(Subjects)
