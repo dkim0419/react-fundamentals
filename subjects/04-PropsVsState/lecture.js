@@ -80,7 +80,7 @@ ReactDOM.render(<App/>, document.getElementById('app'))
 //      this.setState({ isOpen: nextProps.isOpen })
 //  }
 //
-//  handleClick() {
+//  handleClick = () => {
 //    this.setState({ isOpen: !this.state.isOpen }, () => {
 //      if (this.props.onToggle)
 //        this.props.onToggle(this.state.isOpen)
@@ -164,7 +164,7 @@ ReactDOM.render(<App/>, document.getElementById('app'))
 //    isOpen: this.props.isOpen
 //  }
 //
-//  handleClick() {
+//  handleClick = () => {
 //    this.setState({ isOpen: !this.state.isOpen }, () => {
 //      if (this.props.onToggle)
 //        this.props.onToggle(this.state.isOpen)
@@ -267,7 +267,7 @@ ReactDOM.render(<App/>, document.getElementById('app'))
 // ContentToggle anymore?
 
 //class ContentToggle extends React.Component {
-//  handleClick() {
+//  handleClick = () => {
 //    if (this.props.onToggle)
 //      this.props.onToggle(!this.props.isOpen)
 //  }
