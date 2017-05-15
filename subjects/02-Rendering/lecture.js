@@ -1,16 +1,57 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // Vanilla Javascript – how would you render a text input
 // var element = document.createElement('input');
 // element.placeholder = 'Hello, hackers.'
 // document.body.insertBefore(element, document.getElementById('app'));
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // React components are really just functions that take attributes
-// const element = React.DOM.input({ type: 'text', placeholder: 'Hello hackers' })
+// const element = React.DOM.input({ type: 'text', placeholder: 'Hello hackers.' })
 // ReactDOM.render(element, document.getElementById('app'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // You can also pass in children as extra arguments
@@ -20,6 +61,23 @@ import ReactDOM from 'react-dom'
                                 //React.DOM.option({value: '3'}, 'three')
                               //)
 //ReactDOM.render(element, document.getElementById('app'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -42,14 +100,26 @@ import ReactDOM from 'react-dom'
 //console.log(element)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // can pass in functions as event handlers
-//const element = React.DOM.button({onClick: function() { alert('clicked!') }}, 'alert!')
-//ReactDOM.render(element, document.getElementById('app'))
-
-
-////////////////////////////////////////////////////////////////////////////////
-// probably more like this
 //function handleClick() {
   //alert('clicked some more!')
 //}
@@ -57,22 +127,48 @@ import ReactDOM from 'react-dom'
 //ReactDOM.render(element, document.getElementById('app'))
 
 
-////////////////////////////////////////////////////////////////////////////////
-// you get an event, as you'd expect
-//function handleClick() {
-  //console.log(event.button)
-//}
-//const element = React.DOM.button({ onMouseDown: handleClick }, 'log button')
-//ReactDOM.render(element, document.getElementById('app'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
-// JSX is simply different syntax for calling functions
+// What if you could do something like this
 //const element = <div className="App">
                 //<h1 className="Title">Hello!</h1>
                 //<p>Fried Nemo baos are the best</p>
               //</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// JSX is simply different syntax for calling functions
 //const { div, h1, p } = React.DOM
 //const element = div({ className: "App" },
                 //h1({ className: "Title" }, 'Hello!'),
@@ -80,6 +176,23 @@ import ReactDOM from 'react-dom'
               //)
 
 //ReactDOM.render(element, document.getElementById('app'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // no special template syntax/helpers, just use Array methods on lists
@@ -93,6 +206,25 @@ import ReactDOM from 'react-dom'
 //   return <li>{bao.name}</li>
 // })
 // ReactDOM.render(<ul>{items}</ul>, document.getElementById('app'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////

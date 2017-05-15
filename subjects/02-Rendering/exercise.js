@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Exercise:
 //
+// Modify the Menu() function to do the following
 // - render DATA.title in an <h1>
 // - render a <ul> with each of DATA.items as an <li>
 // - now only render an <li> for mexican food (hint: use DATA.items.filter(...))
