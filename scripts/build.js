@@ -51,6 +51,9 @@ const markup = ReactDOMServer.renderToStaticMarkup(
       React.DOM.link({ rel: 'stylesheet', href: '/shared.css' })
     ),
     React.DOM.body({ id: 'index' },
+      React.DOM.header({},
+        React.DOM.h2({}, 'React Fundamentals')
+      ),
       React.DOM.table({ cellSpacing: 0, cellPadding: 0 },
         React.DOM.tbody({},
           SubjectDirNames.map(function (dir, index) {

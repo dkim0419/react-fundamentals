@@ -22,8 +22,13 @@ a:link:hover {
 #index .lecture-link a:visited {
   color: black;
 }
+#index header {
+  margin: 2em auto;
+  max-width: 366px;
+  width: 100%;
+}
 #index table {
-  margin: 5em auto;
+  margin: 3em auto;
 }
 #index table tr.odd {
   background: #e3e3e3;
