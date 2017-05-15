@@ -18,7 +18,7 @@ $ npm start
 ```
 _Note: you may use [yarn](https://yarnpkg.com/en/) instead of npm_
 
-Then open your browser to [http://localhost:8080](http://localhost:8080). You should see a list of tops.
+Then open your browser to [http://localhost:8080](http://localhost:8080). You should see a list of topics.
 
 **IMPORTANT:** Please read the [JavaScript Primer](https://github.com/moaazsidat/react-fundamentals/blob/master/JavaScriptPrimer.md) before attending the workshop. It's a refresher on some of the newer bits of JavaScript you'll want to be familiar with in order to get the most out of the experience.
 
