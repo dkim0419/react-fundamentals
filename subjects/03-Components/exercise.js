@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Exercise:
 //
+// Modify the Tabs component to do the following:
 // - Render a tab for each country with its name in the tab
 // - Make it so that you can click on a tab and it will appear active
 //   while the others appear inactive

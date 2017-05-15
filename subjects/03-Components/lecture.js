@@ -64,7 +64,7 @@ updateThePage()
 //    isOpen: false
 //  }
 //
-//  handleClick() {
+//  handleClick = () => {
 //    this.setState({
 //      isOpen: !this.state.isOpen
 //    })
@@ -99,7 +99,7 @@ updateThePage()
 //    numToggles: 0
 //  }
 //
-//  handleToggle() {
+//  handleToggle = () => {
 //    this.setState({
 //      numToggles: this.state.numToggles + 1
 //    })
