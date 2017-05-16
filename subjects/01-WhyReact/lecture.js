@@ -66,6 +66,8 @@ $('#descending').on('click', (event) => { // <-- state change
   })
 })
 
+
+
 // What's awesome:
 //
 // This code works! Lots of products are stil being built
@@ -76,15 +78,25 @@ $('#descending').on('click', (event) => { // <-- state change
 //
 // When our code...
 //
-// - is written as flows
-// - doesn't call out state
-// - has no entry point to change state
+// - is written as microinteractions with your app
+// - doesn't specify where the state lives
+// - not clear how to change state
 //
-// ...it gets really hard to deal with. After you identify state,
+// ...this gets really hard to deal with. After you identify state,
 // and how to change it, you must write code to connect every state
 // to nearly every other state. Every feature requires changes to code
 // in multiple places. Also, it's just too hard to think about for most
 // of us leading to lot of bugs.
+
+
+
+
+
+
+
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -220,6 +232,9 @@ $('#descending').on('click', (event) => { // <-- state change
 //   })
 // })
 
+
+
+
 // What's awesome
 //
 // - Moved state to models so we can identify what state changes
@@ -229,16 +244,11 @@ $('#descending').on('click', (event) => { // <-- state change
 //
 // What's not so awesome
 //
-// - DOM Bombs
-//   - kill focus for assistive devices
-//   - non-performant
-//
 // - Key value observation model
 //   - can't predict what will happen if you change state
 //     > Events mix the communication and flow of control.
 //     > ... their fundamental nature, ... is that upon an event
 //     > an arbitrary amount of other code is run
-//     > http://clojure.com/blog/2013/06/28/clojure-core-async-channels.html
 //
 //   - leads to cascading updates
 //     - non-performant
@@ -250,6 +260,15 @@ $('#descending').on('click', (event) => { // <-- state change
 //     - have to know how your app changes over time intimately
 //     - lots of code to manage instances
 //     - lots of mistakes
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // import angular from 'angular'
@@ -343,6 +362,9 @@ $('#descending').on('click', (event) => { // <-- state change
 //   }
 // })
 
+
+
+
 // What's awesome
 //
 // - fully declarative templates
@@ -372,6 +394,12 @@ $('#descending').on('click', (event) => { // <-- state change
 //   https://twitter.com/teozaurus/status/518071391959388160
 
 
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // React
 ////////////////////////////////////////////////////////////////////////////////
@@ -382,7 +410,7 @@ $('#descending').on('click', (event) => { // <-- state change
 // class App extends Component {
 //   render() {
 //     return (
-//       <div>Hello World</div>
+//       <div>Left as an excercise.</div>
 //     )
 //   }
 // }
