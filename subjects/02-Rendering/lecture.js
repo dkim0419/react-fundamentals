@@ -13,9 +13,9 @@ import ReactDOM from 'react-dom'
 
 ////////////////////////////////////////////////////////////////////////////////
 // Vanilla Javascript – how would you render a text input
-// var element = document.createElement('input');
-// element.placeholder = 'Hello, hackers.'
-// document.body.insertBefore(element, document.getElementById('app'));
+var element = document.createElement('input');
+element.placeholder = 'Hello, hackers.'
+document.body.insertBefore(element, document.getElementById('app'));
 
 
 
