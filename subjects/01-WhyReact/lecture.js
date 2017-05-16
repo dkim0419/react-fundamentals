@@ -316,7 +316,7 @@ $('#descending').on('click', (event) => { // <-- state change
 //   main.descending = false
 //
 //   main.getFriends = () => {
-//     return [ { name: 'Ryan' }, { name: 'Michael' } ]
+//     return [ { name: 'Alice' }, { name: 'Bob' } ]
 //   }
 //
 //   main.handleSubmit = () => {
