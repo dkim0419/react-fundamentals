@@ -13,9 +13,9 @@ import ReactDOM from 'react-dom'
 
 ////////////////////////////////////////////////////////////////////////////////
 // Vanilla Javascript – how would you render a text input
-var element = document.createElement('input');
-element.placeholder = 'Hello, hackers.'
-document.body.insertBefore(element, document.getElementById('app'));
+// var element = document.createElement('input');
+// element.placeholder = 'Hello, hackers.'
+// document.body.insertBefore(element, document.getElementById('app'));
 
 
 
@@ -54,13 +54,13 @@ document.body.insertBefore(element, document.getElementById('app'));
 
 
 ////////////////////////////////////////////////////////////////////////////////
-// You can also pass in children as extra arguments
-//const element = React.DOM.select({},
-                                //React.DOM.option({value: '1'}, 'one'),
-                                //React.DOM.option({value: '2'}, 'two'),
-                                //React.DOM.option({value: '3'}, 'three')
-                              //)
-//ReactDOM.render(element, document.getElementById('app'))
+//You can also pass in children as extra arguments
+// const element = React.DOM.select({},
+//                                 React.DOM.option({value: '1'}, 'one'),
+//                                 React.DOM.option({value: '2'}, 'two'),
+//                                 React.DOM.option({value: '3'}, 'three')
+//                               )
+// ReactDOM.render(element, document.getElementById('app'))
 
 
 
@@ -82,22 +82,22 @@ document.body.insertBefore(element, document.getElementById('app'));
 
 ////////////////////////////////////////////////////////////////////////////////
 // And build up more UI
-//const { div, select, option, h1 } = React.DOM
-//const element = div({},
-                  //h1({className: 'hot'}, 'These are just functions'),
-                  //select({value: '2'},
-                    //option({value: '1'}, 'one'),
-                    //option({value: '2'}, 'two'),
-                    //option({value: '3'}, 'three')
-                  //)
-                 //)
-//ReactDOM.render(element, document.getElementById('app'))
+const { div, select, option, h1 } = React.DOM
+const element = div({},
+                  h1({className: 'hot'}, 'These are just functions'),
+                  select({value: '2'},
+                    option({value: '1'}, 'one'),
+                    option({value: '2'}, 'two'),
+                    option({value: '3'}, 'three')
+                  )
+                 )
+ReactDOM.render(element, document.getElementById('app'))
 
 
 ////////////////////////////////////////////////////////////////////////////////
 // lets look at one of them in the console
 // don't get upset, `className` is a DOM thing
-//console.log(element)
+// console.log(element)
 
 
 
